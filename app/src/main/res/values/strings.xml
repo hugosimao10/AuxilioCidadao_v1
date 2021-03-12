@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">AuxilioCidadao</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="frag_primeiro">Fragmento Inicial</string>
+    <string name="frag_segundo">Fragmento Login</string>
+    <string name="app_name">Auxílio ao Cidadão</string>
+    <string name="mensagem_ini">Veja e faça reportes de situaões na sua cidade!</string>
+    <string name="msg_login_login">Entrar</string>
+    <string name="msg_voltar">Voltar</string>
+    <string name="bt_registo">Registo</string>
+    <string name="notas_pessoais">Notas Pessoais</string>
+    <string name="logo">Logo</string>
+    <string name="texto_utilizador">Utilizador</string>
+    <string name="texto_pass">Palavra-passe</string>
+    <string name="hint_pass">Insira aqui a palavra-passe</string>
+    <string name="hint_id">Insira aqui o nome de utilizador</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+
 </resources>

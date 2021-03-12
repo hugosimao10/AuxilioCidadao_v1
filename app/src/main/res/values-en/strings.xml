@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">Citizen Assistance</string>
+    <string name="mensagem_ini">See and report situations in your city!</string>
+    <string name="msg_login_login">Login</string>
+    <string name="msg_voltar">Return</string>
+    <string name="frag_primeiro">Initial Fragment</string>
+    <string name="frag_segundo">Second Fragment</string>
+    <string name="bt_registo">Register</string>
+    <string name="notas_pessoais">Personal Notes</string>
+    <string name="logo">Logo</string>
+    <string name="texto_utilizador">User</string>
+    <string name="texto_pass">Password</string>
+    <string name="hint_pass">Insert here your password</string>
+    <string name="hint_id">Insert here your username</string>
+</resources>

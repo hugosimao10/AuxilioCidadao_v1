@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AuxilioCidadao">
-        <activity android:name=".Login"></activity>
+        <activity android:name=".AddReport"></activity>
+        <activity android:name=".Mapa" />
+        <activity android:name=".AddNotasPessoais" />
+        <activity android:name=".NotasPessoais" />
+        <activity android:name=".Login" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
