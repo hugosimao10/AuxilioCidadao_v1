@@ -20,7 +20,7 @@
         tools:layout_gravity="bottom" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler"
+        android:id="@+id/recyclerNotas"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/buttonVoltar2"
@@ -29,7 +29,7 @@
     <Button
         android:id="@+id/buttonVoltar2"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="30dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dp"

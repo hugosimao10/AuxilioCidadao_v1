@@ -19,7 +19,7 @@ class NotasPessoais : AppCompatActivity() {
         }
         val button3: Button = findViewById(R.id.buttonVoltar2)
         button3.setOnClickListener {
-            val intent = Intent(this, Login::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }
