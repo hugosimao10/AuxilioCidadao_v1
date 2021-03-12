@@ -23,12 +23,11 @@
         android:id="@+id/recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
-        android:layout_above="@+id/button2"
+        android:layout_above="@+id/buttonVoltar2"
         android:padding="15dp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonVoltar2"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginLeft="30dp"
