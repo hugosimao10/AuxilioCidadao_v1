@@ -8,23 +8,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
-        android:fontFamily="sans-serif-black"/>
+        android:drawableLeft="@drawable/ic_nota_old"
+        android:fontFamily="sans-serif-black" />
 
     <TextView
         android:id="@+id/notas_viewholder_titulo"
         android:layout_width="wrap_content"
-        android:layout_toRightOf="@+id/notas_id"
-        android:layout_marginLeft="10dp"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:fontFamily="sans-serif-black"/>
+        android:layout_marginStart="@dimen/text_margin"
+        android:layout_marginLeft="@dimen/text_margin"
+        android:layout_marginTop="@dimen/text_margin"
+        android:layout_marginEnd="@dimen/text_margin"
+        android:layout_marginRight="@dimen/text_margin"
+        android:layout_marginBottom="@dimen/text_margin"
+        android:layout_toRightOf="@+id/notas_id"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:text="ete"
+        android:fontFamily="sans-serif-black" />
 
     <TextView
         android:id="@+id/notas_viewholder_descricao"
+        android:text="333"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/notas_id"
         android:layout_margin="@dimen/text_margin"
-        android:fontFamily="sans-serif-black"/>
+        android:fontFamily="sans-serif"/>
 
 </RelativeLayout>

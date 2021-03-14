@@ -14,6 +14,11 @@
     <string name="texto_pass">Palavra-passe</string>
     <string name="hint_pass">Insira aqui a palavra-passe</string>
     <string name="hint_id">Insira aqui o nome de utilizador</string>
+    <string name="but_apagar">Apagar</string>
+    <string name="but_alterar">Alterar</string>
+    <string name="but_salvar">Guardar</string>
+    <string name="hint_titulo">Título</string>
+    <string name="hint_descricao">Descrição</string>
     <!-- TODO: Remove or change this placeholder text -->
 
 

@@ -21,6 +21,7 @@
         android:id="@+id/notas_list"
         android:layout_width="match_parent"
         android:layout_height="621dp"
+        android:padding="@dimen/padding1"
         android:layout_marginTop="100dp"
         android:layout_marginBottom="@dimen/tam_titulo"/>
 

@@ -14,4 +14,9 @@
     <string name="texto_pass">Password</string>
     <string name="hint_pass">Insert here your password</string>
     <string name="hint_id">Insert here your username</string>
+    <string name="but_alterar">Update</string>
+    <string name="but_apagar">Delete</string>
+    <string name="but_salvar">Save</string>
+    <string name="hint_titulo">Title</string>
+    <string name="hint_descricao">Description</string>
 </resources>
