@@ -1,8 +1,7 @@
-package ipvc.estg.auxiliocidadao
+package ipvc.estg.auxiliocidadao.room
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import ipvc.estg.auxiliocidadao.Nota
 
 @Dao
 interface NotaDao {

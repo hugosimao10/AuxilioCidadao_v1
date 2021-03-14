@@ -14,7 +14,7 @@
         <activity android:name=".AddNotasPessoais" />
         <activity android:name=".NotasPessoais" />
         <activity android:name=".Login" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Inicial">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import ipvc.estg.auxiliocidadao.room.NotaAdapter
+import ipvc.estg.auxiliocidadao.room.NotasViewModel
 import kotlinx.android.synthetic.main.activity_notas_pessoais.*
 
 class NotasPessoais : AppCompatActivity() {
@@ -23,7 +25,7 @@ class NotasPessoais : AppCompatActivity() {
         }
 
         fab_voltar.setOnClickListener { _ ->
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, Inicial::class.java)
             startActivity(intent)
         }
 

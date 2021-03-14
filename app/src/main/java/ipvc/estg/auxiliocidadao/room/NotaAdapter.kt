@@ -1,4 +1,4 @@
-package ipvc.estg.auxiliocidadao
+package ipvc.estg.auxiliocidadao.room
 
 import android.content.Context
 import android.content.Intent
@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import ipvc.estg.auxiliocidadao.AddNotasPessoais
+import ipvc.estg.auxiliocidadao.R
 
 private const val TAG = "NotaAdapter"
 

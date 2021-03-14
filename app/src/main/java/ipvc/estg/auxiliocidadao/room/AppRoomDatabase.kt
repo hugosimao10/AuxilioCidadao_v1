@@ -1,4 +1,4 @@
-package ipvc.estg.auxiliocidadao
+package ipvc.estg.auxiliocidadao.room
 
 import android.content.Context
 import androidx.room.Database

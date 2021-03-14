@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddNotasPessoais">
+    tools:context=".AddNotasPessoais"
+    android:background="@drawable/background_gradient">
 
     <TextView
         android:id="@+id/nota_id"
@@ -16,6 +17,7 @@
 
     <EditText
         android:id="@+id/notas_titulo"
+        android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -54,8 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_below="@id/notas_descricao"
-        android:layout_marginTop="116dp"
-
+        android:layout_marginTop="70dp"
         android:backgroundTint="@color/buttons"
         android:text="@string/but_salvar"
         android:layout_marginLeft="32dp" />
@@ -68,26 +69,23 @@
         android:layout_below="@id/notas_descricao"
         android:layout_centerVertical="true"
         android:layout_marginLeft="29dp"
-        android:layout_marginTop="114dp"
+        android:layout_marginTop="70dp"
         android:layout_toRightOf="@+id/btnSave"
         android:backgroundTint="@color/buttons"
         android:gravity="center"
-        android:text="@string/but_alterar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/notas_titulo" />
+        android:text="@string/but_alterar" />
 
     <Button
         android:id="@+id/btnDelete"
         android:layout_width="wrap_content"
-        android:layout_marginTop="114dp"
+        android:layout_marginTop="70dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/notas_descricao"
-        android:layout_toRightOf="@id/btnUpdate"
+        android:layout_alignParentRight="true"
         android:layout_marginHorizontal="20dp"
         android:backgroundTint="@color/buttons"
-        android:text="@string/but_apagar" />
+        android:text="@string/but_apagar"
+        android:layout_alignParentEnd="true" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_voltar1"

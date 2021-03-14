@@ -1,4 +1,4 @@
-package ipvc.estg.auxiliocidadao
+package ipvc.estg.auxiliocidadao.room
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

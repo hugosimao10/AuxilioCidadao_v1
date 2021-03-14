@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Mapa">
+    tools:context=".Mapa"
+    android:background="@drawable/background_gradient">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"

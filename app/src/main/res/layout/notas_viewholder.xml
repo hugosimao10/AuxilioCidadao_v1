@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    >
 
     <TextView
         android:id="@+id/notas_id"
@@ -9,7 +10,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
         android:drawableLeft="@drawable/ic_nota_old"
-        android:fontFamily="sans-serif-black" />
+        android:fontFamily="sans-serif-black"
+        />
 
     <TextView
         android:id="@+id/notas_viewholder_titulo"
