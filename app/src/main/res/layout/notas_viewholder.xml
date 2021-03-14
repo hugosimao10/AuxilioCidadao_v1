@@ -34,6 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/notas_id"
         android:layout_margin="@dimen/text_margin"
+        android:textSize="@dimen/tam_descricao"
         android:fontFamily="sans-serif"/>
 
 </RelativeLayout>
