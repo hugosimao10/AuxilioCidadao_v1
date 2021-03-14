@@ -2,19 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    >
+    android:layout_marginHorizontal="80dp">
 
     <TextView
         android:id="@+id/notas_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:visibility="invisible"
-        android:drawableLeft="@drawable/ic_notas"
-        android:fontFamily="sans-serif-black"
-        />
-    <TextView
-        android:id="@+id/notas_id1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
@@ -32,7 +23,7 @@
         android:layout_marginEnd="@dimen/text_margin"
         android:layout_marginRight="@dimen/text_margin"
         android:layout_marginBottom="@dimen/text_margin"
-        android:layout_toRightOf="@+id/notas_id1"
+        android:layout_toRightOf="@+id/notas_id"
         android:textStyle="bold"
         android:textSize="20dp"
         android:text="ete"
@@ -42,8 +33,8 @@
         android:id="@+id/notas_viewholder_descricao"
         android:text="333"
         android:layout_width="wrap_content"
-        android:layout_toRightOf="@id/notas_id1"
         android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/notas_id"
         android:layout_below="@+id/notas_id"
         android:layout_margin="@dimen/text_margin"
         android:textSize="@dimen/tam_descricao"

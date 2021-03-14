@@ -14,15 +14,15 @@
         android:textSize="@dimen/tam_titulo"
         android:textStyle="bold"
         android:textColor="@color/black"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         />
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/notas_list"
         android:layout_width="match_parent"
-        android:layout_height="525dp"
-        android:layout_marginTop="100dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="60dp"
         android:layout_marginBottom="@dimen/tam_titulo"
         android:padding="@dimen/padding1"
         android:scrollbarAlwaysDrawVerticalTrack="true" />

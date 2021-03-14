@@ -21,7 +21,7 @@
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="62dp"
+        android:layout_marginTop="22dp"
         android:layout_below="@+id/nota_id"
         android:ems="10"
         android:hint="@string/hint_titulo"
@@ -38,12 +38,12 @@
         android:layout_below="@id/notas_titulo"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="45dp"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/hint_descricao"
         android:inputType="text|textMultiLine|textCapSentences"
         android:maxLines="2"
-        android:maxLength="45"
-        android:layout_centerHorizontal="true"
-        android:hint="@string/hint_descricao" />
+        android:maxLength="90" />
 
     <Button
         android:id="@+id/btnSave"
@@ -66,6 +66,7 @@
         android:layout_centerVertical="true"
         android:layout_marginLeft="29dp"
         android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
         android:layout_toRightOf="@+id/btnSave"
         android:backgroundTint="@color/buttons"
         android:gravity="center"
