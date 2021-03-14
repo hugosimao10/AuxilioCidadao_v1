@@ -43,13 +43,6 @@ class AddNotasPessoais : AppCompatActivity() {
             isEdit = true
         }
 
-        /* Prepare OnClickListeners for each button:
-            Save, Update and Delete.
-
-           They pretty much do the same operations and checks, but use the specific
-           insert, update, delete method from the ViewModel.
-
-         */
         val btnSave = btnSave
         btnSave.setOnClickListener { view ->
             val id = 0L
@@ -95,17 +88,11 @@ class AddNotasPessoais : AppCompatActivity() {
             finish()
         }
 
-        /* Hide buttons depending on our case: this is a very simplistic UI management
-           example, and you need to correctly set the constraints on the Layout to make
-           this at least marginally pleasant. There's better ways, of course. :-)
-         */
         if (isEdit) {
-            /* btnSave calls the dao.save method, which actually creates a new record
-               By hiding it, we correctly allow only Update and Delete
-             */
+
             btnSave.visibility = View.GONE
         } else {
-            /* No reason to Update or Delete a new Record yet to be saved */
+
             btnUpdate.visibility = View.GONE
             btnDelete.visibility = View.GONE
         }
