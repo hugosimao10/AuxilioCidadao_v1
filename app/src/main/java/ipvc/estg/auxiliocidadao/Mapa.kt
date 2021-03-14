@@ -16,5 +16,9 @@ class Mapa : AppCompatActivity() {
             val intent = Intent(this, AddReport::class.java)
             startActivity(intent)
         }
+
+
     }
+
+
 }

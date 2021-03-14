@@ -1,41 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".NotasPessoais">
+    android:layout_height="match_parent">
+
+
+
+    <include layout="@layout/content" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab1"
+        android:id="@+id/fab_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_margin="16dp"
-        android:contentDescription="botaoAddReport"
-        android:src="@drawable/icon_add"
-        app:tint="@color/white"
-        app:backgroundTint="@color/buttons"
-        tools:layout_gravity="bottom" />
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:contentDescription="TODO" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerNotas"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/buttonVoltar2"
-        android:padding="15dp" />
-
-    <Button
-        android:id="@+id/buttonVoltar2"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginLeft="30dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="@color/buttons"
-        android:text="@string/msg_voltar"
-        android:textStyle="bold" />
-
-
-</RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
