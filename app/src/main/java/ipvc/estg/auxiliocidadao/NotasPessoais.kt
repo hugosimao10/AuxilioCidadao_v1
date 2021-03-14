@@ -7,7 +7,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_notas_pessoais.*
-import kotlinx.android.synthetic.main.content.*
 
 class NotasPessoais : AppCompatActivity() {
 
@@ -20,6 +19,11 @@ class NotasPessoais : AppCompatActivity() {
 
         fab_add.setOnClickListener { _ ->
             val intent = Intent(this, AddNotasPessoais::class.java)
+            startActivity(intent)
+        }
+
+        fab_voltar.setOnClickListener { _ ->
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 

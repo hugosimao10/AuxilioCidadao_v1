@@ -5,17 +5,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/notas_pessoais"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/tam_titulo"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
+        />
 
 
-    <include layout="@layout/content" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notas_list"
+        android:layout_width="match_parent"
+        android:layout_height="621dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="@dimen/tam_titulo"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
+        android:backgroundTint="@color/buttons"
+        android:tintMode="@color/white"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_input_add"
-        android:contentDescription="TODO" />
+        android:src="@drawable/icon_add"
+        android:contentDescription="buttonAddNota" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_voltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:backgroundTint="@color/buttons"
+        android:tintMode="@color/white"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/icon_back"
+        android:contentDescription="buttonAddNota" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

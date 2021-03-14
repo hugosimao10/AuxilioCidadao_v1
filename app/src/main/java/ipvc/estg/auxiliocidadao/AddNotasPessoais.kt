@@ -50,7 +50,11 @@ class AddNotasPessoais : AppCompatActivity() {
             val descricao = notas_descricao.text.toString()
 
             if (titulo.isBlank() or titulo.isEmpty()) {
-                Snackbar.make(view, "Empty data is not allowed", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Este campo não pode ficar vazio!", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show()
+            }
+            if (descricao.isBlank() or descricao.isEmpty()) {
+                Snackbar.make(view, "Este campo não pode ficar vazio!", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
             }
 
@@ -64,14 +68,19 @@ class AddNotasPessoais : AppCompatActivity() {
         val btnUpdate = btnUpdate
         btnUpdate.setOnClickListener { view ->
             val id = nota_id.text.toString().toLong()
-            val record = notas_titulo.text.toString()
+            val titulo = notas_titulo.text.toString()
             val descricao = notas_descricao.text.toString()
 
-            if (record.isBlank() or record.isEmpty()) {
-                Snackbar.make(view, "Empty data is not allowed", Snackbar.LENGTH_LONG)
+            if (titulo.isBlank() or titulo.isEmpty()) {
+                Snackbar.make(view, "Este campo não pode ficar vazio!", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
-            } else {
-                val item = Nota(id = id, titulo = record, descricao = descricao)
+            }
+            if (descricao.isBlank() or descricao.isEmpty()) {
+                Snackbar.make(view, "Este campo não pode ficar vazio!", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show()
+            }
+            else {
+                val item = Nota(id = id, titulo = titulo, descricao = descricao)
                 notaViewModel.update(item)
                 finish()
             }
@@ -80,10 +89,10 @@ class AddNotasPessoais : AppCompatActivity() {
         val btnDelete = btnDelete
         btnDelete.setOnClickListener {
             val id = nota_id.text.toString().toLong()
-            val record = notas_titulo.text.toString()
+            val titulo = notas_titulo.text.toString()
             val descricao = notas_descricao.text.toString()
 
-            val item = Nota(id = id, titulo = record, descricao = descricao)
+            val item = Nota(id = id, titulo = titulo, descricao = descricao)
             notaViewModel.delete(item)
             finish()
         }
