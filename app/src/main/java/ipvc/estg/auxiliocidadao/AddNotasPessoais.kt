@@ -43,8 +43,6 @@ class AddNotasPessoais : AppCompatActivity() {
 
                 if (it != null) {
 
-                    viewId.setCompoundDrawablesWithIntrinsicBounds(
-                        R.drawable.ic_nota_old, 0, 0, 0);
                     viewId.text = it.id.toString()
                     viewTitulo.setText(it.titulo)
                     viewDescricao.setText(it.descricao)

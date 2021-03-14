@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,45 +8,71 @@
 
     <TextView
         android:id="@+id/nota_id"
+        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentTop="true" />
 
     <EditText
         android:id="@+id/notas_titulo"
+        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="62dp"
+        android:layout_below="@+id/nota_id"
         android:ems="10"
         android:hint="@string/hint_titulo"
         android:inputType="text"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nota_id" />
+        app:layout_constraintTop_toBottomOf="@+id/nota_id"
+        android:gravity="center_horizontal" />
 
+
+    <EditText
+        android:id="@+id/notas_descricao"
+        android:layout_below="@id/notas_titulo"
+        android:layout_width="350dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="50dp"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/hint_descricao"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/btnSave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notas_titulo"
+        android:gravity="center_horizontal" />
 
     <Button
         android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
+        android:layout_below="@id/notas_descricao"
         android:layout_marginTop="116dp"
+
         android:backgroundTint="@color/buttons"
         android:text="@string/but_salvar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/notas_titulo"
         android:layout_marginLeft="32dp" />
+
 
     <Button
         android:id="@+id/btnUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
-        android:text="@string/but_alterar"
+        android:layout_below="@id/notas_descricao"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="114dp"
+        android:layout_toRightOf="@+id/btnSave"
         android:backgroundTint="@color/buttons"
+        android:gravity="center"
+        android:text="@string/but_alterar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,39 +81,23 @@
     <Button
         android:id="@+id/btnDelete"
         android:layout_width="wrap_content"
+        android:layout_marginTop="114dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
-        android:layout_marginEnd="24dp"
+        android:layout_below="@id/notas_descricao"
+        android:layout_toRightOf="@id/btnUpdate"
+        android:layout_marginHorizontal="20dp"
         android:backgroundTint="@color/buttons"
-        android:text="@string/but_apagar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/notas_titulo"
-        android:layout_marginRight="24dp" />
-
-    <EditText
-        android:id="@+id/notas_descricao"
-        android:layout_width="350dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="33dp"
-        android:ems="10"
-        android:hint="@string/hint_descricao"
-        android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/btnSave"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/notas_titulo" />
+        android:text="@string/but_apagar" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_voltar1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|start"
+        android:layout_alignParentBottom="true"
         android:layout_margin="@dimen/fab_margin"
         android:backgroundTint="@color/buttons"
         android:contentDescription="buttonAddNota"
         android:src="@drawable/icon_back"
-        android:tintMode="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:tintMode="@color/white" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
