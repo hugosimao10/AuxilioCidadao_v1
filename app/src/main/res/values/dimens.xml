@@ -1,7 +1,8 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="text_margin">10dp</dimen>
-    <dimen name="tam_titulo">40sp</dimen>
+    <dimen name="tam_titulo">20dp</dimen>
     <dimen name="padding1">15dp</dimen>
-    <dimen name="tam_descricao">20dp</dimen>
+    <dimen name="tam_descricao">17dp</dimen>
+    <dimen name="tam_titulos1">45dp</dimen>
 </resources>

@@ -9,25 +9,34 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
-        android:drawableLeft="@drawable/ic_notas"
+        android:visibility="invisible"
+        android:drawableLeft="@drawable/ic_seta"
         android:fontFamily="sans-serif-black"
         />
+
+    <TextView
+        android:id="@+id/notas_id1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:drawableLeft="@drawable/ic_seta"
+        android:fontFamily="sans-serif-black"
+        />
+
+
 
     <TextView
         android:id="@+id/notas_viewholder_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/text_margin"
-        android:layout_marginLeft="@dimen/text_margin"
         android:layout_marginTop="@dimen/text_margin"
-        android:layout_marginEnd="@dimen/text_margin"
-        android:layout_marginRight="@dimen/text_margin"
-        android:layout_marginBottom="@dimen/text_margin"
         android:layout_toRightOf="@+id/notas_id"
-        android:textStyle="bold"
-        android:textSize="20dp"
+        android:layout_marginVertical="10dp"
+        android:fontFamily="sans-serif-black"
         android:text="ete"
-        android:fontFamily="sans-serif-black" />
+        android:textColor="@color/black"
+        android:textSize="@dimen/tam_titulo"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/notas_viewholder_descricao"
@@ -35,8 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/notas_id"
-        android:layout_below="@+id/notas_id"
-        android:layout_margin="@dimen/text_margin"
+        android:layout_below="@+id/notas_viewholder_titulo"
         android:textSize="@dimen/tam_descricao"
         android:fontFamily="sans-serif"/>
 
