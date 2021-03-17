@@ -6,8 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import ipvc.estg.auxiliocidadao.room.NotaAdapter
-import ipvc.estg.auxiliocidadao.room.NotasViewModel
+import ipvc.estg.auxiliocidadao.adapter.NotaAdapter
+import ipvc.estg.auxiliocidadao.viewModel.NotasViewModel
 import kotlinx.android.synthetic.main.activity_notas_pessoais.*
 
 class NotasPessoais : AppCompatActivity() {

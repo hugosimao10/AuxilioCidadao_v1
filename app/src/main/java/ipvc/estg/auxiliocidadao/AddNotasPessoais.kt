@@ -9,11 +9,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.snackbar.Snackbar
-import ipvc.estg.auxiliocidadao.room.Constants
 import ipvc.estg.auxiliocidadao.room.Nota
-import ipvc.estg.auxiliocidadao.room.NotasViewModel
+import ipvc.estg.auxiliocidadao.viewModel.NotasViewModel
 import kotlinx.android.synthetic.main.activity_add_notas_pessoais.*
-import kotlinx.android.synthetic.main.activity_notas_pessoais.*
 
 class AddNotasPessoais : AppCompatActivity() {
 
@@ -35,8 +33,8 @@ class AddNotasPessoais : AppCompatActivity() {
 
         notaViewModel = ViewModelProvider(this).get(NotasViewModel::class.java)
 
-        if (intent.hasExtra(Constants.NOTA_ID)) {
-            notaId = intent.getLongExtra(Constants.NOTA_ID, 0L)
+        if (intent.hasExtra("nota_id")) {
+            notaId = intent.getLongExtra("nota_id", 0L)
 
             notaViewModel.get(notaId).observe(this, Observer {
 
@@ -48,6 +46,7 @@ class AddNotasPessoais : AppCompatActivity() {
 
                     viewId.setCompoundDrawablesWithIntrinsicBounds(
                         R.drawable.ic_notas, 0, 0, 0);
+                    
                     viewId.text = it.id.toString()
                     viewTitulo.setText(it.titulo)
                     viewDescricao.setText(it.descricao)

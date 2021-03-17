@@ -4,7 +4,7 @@
     <string name="frag_primeiro">Fragmento Inicial</string>
     <string name="frag_segundo">Fragmento Login</string>
     <string name="app_name">Auxílio ao Cidadão</string>
-    <string name="mensagem_ini">Veja e faça reportes de situaões na sua cidade!</string>
+    <string name="mensagem_ini">Faça reportes e consulte situações na sua cidade!</string>
     <string name="msg_login_login">Entrar</string>
     <string name="msg_voltar">Voltar</string>
     <string name="bt_registo">Registo</string>

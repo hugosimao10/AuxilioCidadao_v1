@@ -40,6 +40,7 @@
         android:text="333"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:layout_toRightOf="@id/notas_id"
         android:layout_below="@+id/notas_viewholder_titulo"
         android:textSize="@dimen/tam_descricao"

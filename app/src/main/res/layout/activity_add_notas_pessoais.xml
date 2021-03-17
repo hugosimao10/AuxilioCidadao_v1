@@ -20,6 +20,7 @@
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
+        android:textColor="@color/black"
         android:layout_height="wrap_content"
         android:layout_marginTop="62dp"
         android:layout_below="@+id/nota_id"
@@ -39,6 +40,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:textColor="@color/black"
         android:inputType="text|textMultiLine|textCapSentences"
         android:maxLines="2"
         android:maxLength="45"
@@ -53,7 +55,8 @@
         android:layout_below="@id/notas_descricao"
         android:layout_marginTop="70dp"
         android:layout_centerHorizontal="true"
-        android:backgroundTint="@color/buttons"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/buttonsBackground"
         android:text="@string/but_salvar"
         android:layout_marginLeft="32dp" />
 
@@ -66,8 +69,9 @@
         android:layout_centerVertical="true"
         android:layout_marginLeft="29dp"
         android:layout_marginTop="70dp"
+        android:textColor="@color/white"
         android:layout_toRightOf="@+id/btnSave"
-        android:backgroundTint="@color/buttons"
+        android:backgroundTint="@color/buttonsBackground"
         android:gravity="center"
         android:text="@string/but_alterar" />
 
@@ -75,11 +79,12 @@
         android:id="@+id/btnDelete"
         android:layout_width="wrap_content"
         android:layout_marginTop="70dp"
+        android:textColor="@color/white"
         android:layout_height="wrap_content"
         android:layout_below="@id/notas_descricao"
         android:layout_alignParentRight="true"
         android:layout_marginHorizontal="20dp"
-        android:backgroundTint="@color/buttons"
+        android:backgroundTint="@color/buttonsBackground"
         android:text="@string/but_apagar"
         android:layout_alignParentEnd="true" />
 
@@ -89,7 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_margin="@dimen/fab_margin"
-        android:backgroundTint="@color/buttons"
+        android:backgroundTint="@color/buttonsBackground"
         android:contentDescription="buttonAddNota"
         android:src="@drawable/icon_back"
         android:tintMode="@color/white" />

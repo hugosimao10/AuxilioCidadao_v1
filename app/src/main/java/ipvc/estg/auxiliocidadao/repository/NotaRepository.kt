@@ -1,6 +1,8 @@
-package ipvc.estg.auxiliocidadao.room
+package ipvc.estg.auxiliocidadao.repository
 
 import androidx.lifecycle.LiveData
+import ipvc.estg.auxiliocidadao.room.Nota
+import ipvc.estg.auxiliocidadao.room.NotaDao
 
 class NotaRepository(private val datarecordDao: NotaDao) {
 

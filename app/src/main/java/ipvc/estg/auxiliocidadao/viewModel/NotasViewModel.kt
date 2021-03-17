@@ -1,10 +1,13 @@
-package ipvc.estg.auxiliocidadao.room
+package ipvc.estg.auxiliocidadao.viewModel
 
 import android.app.Application
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
+import ipvc.estg.auxiliocidadao.repository.NotaRepository
+import ipvc.estg.auxiliocidadao.room.AppRoomDatabase
+import ipvc.estg.auxiliocidadao.room.Nota
 import kotlinx.coroutines.launch
 
 private const val TAG = "DataRecordViewModel "

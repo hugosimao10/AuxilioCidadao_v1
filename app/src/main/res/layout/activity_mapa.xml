@@ -17,7 +17,17 @@
         android:contentDescription="botaoAddReport"
         android:src="@drawable/icon_add"
         app:tint="@color/white"
-        app:backgroundTint="@color/buttons"
+        app:backgroundTint="@color/buttonsBackground"
         tools:layout_gravity="bottom" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mapa com indicadores, botão de logout"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="20dp"/>
+
 
 </RelativeLayout>
