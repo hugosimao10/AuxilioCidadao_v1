@@ -5,7 +5,7 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_gradient"
+    android:background="@color/white"
     tools:context=".Inicial">
 
 
@@ -97,6 +97,7 @@
         android:layout_marginTop="72dp"
         android:layout_toRightOf="@id/text_id"
         android:textColor="@color/black"
+        android:shadowColor="@color/black"
         android:hint="@string/hint_id"
         android:inputType="textPersonName"
         android:padding="15dp"
