@@ -1,26 +1,26 @@
 package ipvc.estg.auxiliocidadao.repository
 
 import androidx.lifecycle.LiveData
-import ipvc.estg.auxiliocidadao.room.Nota
-import ipvc.estg.auxiliocidadao.room.NotaDao
+import ipvc.estg.auxiliocidadao.entitie.Nota
+import ipvc.estg.auxiliocidadao.dao.NotaDao
 
-class NotaRepository(private val datarecordDao: NotaDao) {
+class NotaRepository(private val notaDao: NotaDao) {
 
-    val allItems: LiveData<List<Nota>> = datarecordDao.getall()
+    val allItems: LiveData<List<Nota>> = notaDao.getall()
 
     fun get(id: Long):LiveData<Nota> {
-        return datarecordDao.get(id)
+        return notaDao.get(id)
     }
 
     suspend fun update(item: Nota) {
-        datarecordDao.update(item)
+        notaDao.update(item)
     }
 
     suspend fun insert(item: Nota) {
-        datarecordDao.insert(item)
+        notaDao.insert(item)
     }
 
     suspend fun delete(item: Nota) {
-        datarecordDao.delete(item)
+        notaDao.delete(item)
     }
 }

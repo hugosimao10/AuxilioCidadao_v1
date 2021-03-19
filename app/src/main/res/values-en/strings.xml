@@ -19,4 +19,6 @@
     <string name="but_salvar">Save</string>
     <string name="hint_titulo">Title</string>
     <string name="hint_descricao">Description</string>
+    <string name="tituloEmpty">The title cannot be blank!</string>
+    <string name="descricaoEmpty">The description cannot be blank!</string>
 </resources>

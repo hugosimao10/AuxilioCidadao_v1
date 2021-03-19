@@ -1,16 +1,13 @@
 package ipvc.estg.auxiliocidadao.viewModel
 
 import android.app.Application
-import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import ipvc.estg.auxiliocidadao.repository.NotaRepository
-import ipvc.estg.auxiliocidadao.room.AppRoomDatabase
-import ipvc.estg.auxiliocidadao.room.Nota
+import ipvc.estg.auxiliocidadao.db.AppRoomDatabase
+import ipvc.estg.auxiliocidadao.entitie.Nota
 import kotlinx.coroutines.launch
-
-private const val TAG = "DataRecordViewModel "
 
 class NotasViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -18,7 +15,6 @@ class NotasViewModel(application: Application) : AndroidViewModel(application) {
     val allItems: LiveData<List<Nota>>
 
     init {
-        Log.d(TAG, "Inside ViewModel init")
         val dao = AppRoomDatabase.getDatabase(application).notaDao()
         repository = NotaRepository(dao)
         allItems = repository.allItems

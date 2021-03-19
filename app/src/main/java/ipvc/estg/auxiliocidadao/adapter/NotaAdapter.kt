@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import ipvc.estg.auxiliocidadao.AddNotasPessoais
 import ipvc.estg.auxiliocidadao.R
-import ipvc.estg.auxiliocidadao.room.Nota
+import ipvc.estg.auxiliocidadao.entitie.Nota
 
 private const val TAG = "NotaAdapter"
 
@@ -24,7 +24,7 @@ class NotaAdapter internal constructor(context: Context) :
     private val onClickListener: View.OnClickListener = View.OnClickListener { v ->
         val item = v.tag as Nota
 
-        Log.d(TAG, "Setting onClickListener for item ${item.id}")
+        Log.d(TAG, "onClickListener for item${item.id}")
 
         val intent = Intent(v.context, AddNotasPessoais::class.java).apply {
             putExtra("nota_id", item.id)
