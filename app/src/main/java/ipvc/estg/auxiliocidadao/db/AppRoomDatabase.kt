@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import ipvc.estg.auxiliocidadao.dao.NotaDao
-import ipvc.estg.auxiliocidadao.entitie.Nota
+import ipvc.estg.auxiliocidadao.entity.Nota
 
 @Database(
     entities = [Nota::class],
@@ -20,10 +20,10 @@ abstract class AppRoomDatabase : RoomDatabase() {
         @Volatile
         private var INSTANCE: RoomDatabase? = null
 
-        fun getDatabase(context: Context): AppRoomDatabase {
+        fun getDatabase(context: Context): ipvc.estg.auxiliocidadao.db.AppRoomDatabase {
             val tempInstance = INSTANCE
             if (tempInstance != null) {
-                return tempInstance as AppRoomDatabase
+                return tempInstance as ipvc.estg.auxiliocidadao.db.AppRoomDatabase
             }
             synchronized(this) {
                 val instance = Room.databaseBuilder(

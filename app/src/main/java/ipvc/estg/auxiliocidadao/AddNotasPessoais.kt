@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.snackbar.Snackbar
-import ipvc.estg.auxiliocidadao.entitie.Nota
+import ipvc.estg.auxiliocidadao.entity.Nota
 import ipvc.estg.auxiliocidadao.viewModel.NotasViewModel
 import kotlinx.android.synthetic.main.activity_add_notas_pessoais.*
 
@@ -66,8 +66,8 @@ class AddNotasPessoais : AppCompatActivity() {
                 Snackbar.make(view, "O título não pode ficar vazio!", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
             }
-            if (descricao.isBlank() or descricao.isEmpty()) {
-                Snackbar.make(view, "A descricção não pode ficar vazia!", Snackbar.LENGTH_LONG)
+            else if (descricao.isBlank() or descricao.isEmpty()) {
+                Snackbar.make(view, "A descrição não pode ficar vazia!", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
             }
 
@@ -88,8 +88,8 @@ class AddNotasPessoais : AppCompatActivity() {
                 Snackbar.make(view, "O título não pode ficar vazio!", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
             }
-            if (descricao.isBlank() or descricao.isEmpty()) {
-                Snackbar.make(view, "A descricção não pode ficar vazia!", Snackbar.LENGTH_LONG)
+            else if (descricao.isBlank() or descricao.isEmpty()) {
+                Snackbar.make(view, "A descrição não pode ficar vazia!", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
             }
             else {

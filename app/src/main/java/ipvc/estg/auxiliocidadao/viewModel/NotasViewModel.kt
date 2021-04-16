@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import ipvc.estg.auxiliocidadao.repository.NotaRepository
 import ipvc.estg.auxiliocidadao.db.AppRoomDatabase
-import ipvc.estg.auxiliocidadao.entitie.Nota
+import ipvc.estg.auxiliocidadao.entity.Nota
 import kotlinx.coroutines.launch
 
 class NotasViewModel(application: Application) : AndroidViewModel(application) {

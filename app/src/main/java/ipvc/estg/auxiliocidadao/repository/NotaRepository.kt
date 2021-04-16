@@ -1,7 +1,7 @@
 package ipvc.estg.auxiliocidadao.repository
 
 import androidx.lifecycle.LiveData
-import ipvc.estg.auxiliocidadao.entitie.Nota
+import ipvc.estg.auxiliocidadao.entity.Nota
 import ipvc.estg.auxiliocidadao.dao.NotaDao
 
 class NotaRepository(private val notaDao: NotaDao) {

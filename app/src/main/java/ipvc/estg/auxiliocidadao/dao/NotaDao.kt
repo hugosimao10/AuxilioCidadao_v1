@@ -2,7 +2,7 @@ package ipvc.estg.auxiliocidadao.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import ipvc.estg.auxiliocidadao.entitie.Nota
+import ipvc.estg.auxiliocidadao.entity.Nota
 
 @Dao
 interface NotaDao {
