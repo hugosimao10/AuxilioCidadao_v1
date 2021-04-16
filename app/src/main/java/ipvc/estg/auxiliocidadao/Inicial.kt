@@ -12,7 +12,7 @@ class Inicial : AppCompatActivity() {
 
         val button: Button = findViewById(R.id.buttonLogin)
         button.setOnClickListener {
-            val intent = Intent(this, Mapa::class.java)
+            val intent = Intent(this, Maps::class.java)
             startActivity(intent)
         }
 

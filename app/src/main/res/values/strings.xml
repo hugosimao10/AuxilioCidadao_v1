@@ -21,6 +21,7 @@
     <string name="hint_descricao">Descrição</string>
     <string name="tituloEmpty">O título não pode ficar em branco!</string>
     <string name="descricaoEmpty">A descrição não pode ficar em branco!</string>
+    <string name="title_activity_maps">Map</string>
     <!-- TODO: Remove or change this placeholder text -->
 
 
