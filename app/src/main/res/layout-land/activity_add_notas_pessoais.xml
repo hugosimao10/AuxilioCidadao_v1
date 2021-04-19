@@ -43,9 +43,7 @@
         android:layout_marginTop="45dp"
         android:layout_centerHorizontal="true"
         android:hint="@string/hint_descricao"
-        android:inputType="text|textMultiLine|textCapSentences"
-        android:maxLines="2"
-        android:maxLength="90" />
+        android:inputType="textMultiLine" />
 
     <Button
         android:id="@+id/btnSave"

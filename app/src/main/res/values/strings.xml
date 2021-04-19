@@ -32,6 +32,11 @@
     <string name="id1" translatable="false">0</string>
     <string name="lastId" translatable="false">1</string>
     <string name="filtros">Filtros</string>
+    <string name="Latlong">Coordenadas</string>
+    <string name="insereProblema">Insira aqui a situação a reportar</string>
+    <string name="addFoto">Adicionar Foto</string>
+    <string name="problemaTit">Problema a reportar</string>
+    <string name="enviar">Enviar</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

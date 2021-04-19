@@ -29,4 +29,9 @@
     <string name="LoginOK">Successfully logged in!</string>
     <string name="LoginFalhado">Inserted data is not valid!</string>
     <string name="filtros">Filters</string>
+    <string name="Latlong">Coordinates</string>
+    <string name="insereProblema">Insert here the situation you wish to report</string>
+    <string name="addFoto">Add photo</string>
+    <string name="problemaTit">Situation to report</string>
+    <string name="enviar">Send</string>
 </resources>
