@@ -9,7 +9,7 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/buttonLogout"
+        android:id="@+id/butLogout"
         android:layout_width="wrap_content"
         android:layout_gravity="right"
         android:layout_height="41dp"

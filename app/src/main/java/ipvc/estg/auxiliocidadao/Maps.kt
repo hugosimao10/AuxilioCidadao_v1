@@ -1,8 +1,11 @@
 package ipvc.estg.auxiliocidadao
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.Toast
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -34,7 +37,24 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
+        val sharedPref: SharedPreferences = getSharedPreferences(
+                getString(R.string.guarda_login), Context.MODE_PRIVATE
+        )
 
+        val button: Button = findViewById(R.id.butLogout)
+        button.setOnClickListener {
+
+            val sharedPref: SharedPreferences = getSharedPreferences(
+                    getString(R.string.guarda_login), Context.MODE_PRIVATE)
+            with(sharedPref.edit()){
+                putInt(getString(R.string.id1), 0)
+                apply()
+            }
+
+            val intent = Intent(this@Maps, Inicial::class.java)
+            startActivity(intent)
+            finish()
+        }
 
 
         // COORDENADAS DE VIANA PARA USAR COMO CENTRAL NA CAMERA
