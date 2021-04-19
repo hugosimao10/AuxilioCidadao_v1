@@ -8,7 +8,7 @@
     android:background="@color/white"
     tools:context=".AddReport">
 
-
+    
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_voltar2"
         android:layout_width="wrap_content"
@@ -53,7 +53,7 @@
         android:layout_marginTop="10dp"
         android:text="@string/Latlong"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/editTextCoordinates"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textReporte"
@@ -73,13 +73,13 @@
         android:layout_marginRight="186dp"
         android:layout_marginBottom="11dp"
         android:text="@string/problemaTit"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+        app:layout_constraintBottom_toTopOf="@+id/ediTextProblem"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCoordinates" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonSend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -88,27 +88,27 @@
         app:layout_constraintBottom_toTopOf="@+id/fab_voltar2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPhoto" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageViewPhoto"
         android:layout_width="165dp"
         android:layout_height="159dp"
         android:src="@drawable/ic_baseline_photo_camera_24"
         android:layout_marginTop="36dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.515"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
+        app:layout_constraintStart_toEndOf="@+id/buttonAddPhoto"
+        app:layout_constraintTop_toBottomOf="@+id/ediTextProblem"
         />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonAddPhoto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
         android:text="@string/addFoto"
-        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSend"
         app:layout_constraintHorizontal_bias="0.0"
         android:layout_marginLeft="@dimen/padding1"
         android:backgroundTint="@color/buttonsBackground"
@@ -116,7 +116,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editTextCoordinates"
         android:layout_width="223dp"
         android:enabled="false"
         android:layout_height="38dp"
@@ -129,7 +129,7 @@
         app:layout_constraintVertical_bias="0.188" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/ediTextProblem"
         android:layout_width="370dp"
         android:layout_height="54dp"
         android:layout_marginStart="54dp"
@@ -139,7 +139,7 @@
         android:layout_marginRight="58dp"
         android:layout_marginBottom="36dp"
         android:inputType="textMultiLine"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewPhoto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
