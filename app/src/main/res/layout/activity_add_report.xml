@@ -8,6 +8,7 @@
     android:background="@color/white"
     tools:context=".AddReport">
 
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_voltar2"
         android:layout_width="wrap_content"
