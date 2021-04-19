@@ -37,8 +37,6 @@ class Inicial : AppCompatActivity() {
             finish()
         }
 
-
-
         // BOTAO QUE CONFIRMA DADOS DE LOGIN E LEVA PARA O MAPA
 
         val button: Button = findViewById(R.id.buttonLogin)
