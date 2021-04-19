@@ -14,6 +14,7 @@ class Inicial : AppCompatActivity() {
         button.setOnClickListener {
             val intent = Intent(this, Maps::class.java)
             startActivity(intent)
+            finish()
         }
 
         val button2: Button = findViewById(R.id.buttonNotas)

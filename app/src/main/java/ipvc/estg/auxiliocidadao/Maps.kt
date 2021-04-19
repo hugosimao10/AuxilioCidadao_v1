@@ -4,17 +4,24 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-
-import com.google.android.gms.maps.CameraUpdateFactory
+import android.widget.Toast
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import ipvc.estg.auxiliocidadao.api.EndPoints
+import ipvc.estg.auxiliocidadao.api.Report
+import ipvc.estg.auxiliocidadao.api.ServiceBuilder
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class Maps : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
+    private lateinit var reports: List<Report>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +31,30 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
+        val request = ServiceBuilder.buildService(EndPoints::class.java)
+        val call = request.getReports()
+        var position: LatLng
 
+        call.enqueue(object : Callback<List<Report>> {
+            override fun onResponse(call: Call<List<Report>>, response: Response<List<Report>>) {
+                if (response.isSuccessful) {
+                    reports = response.body()!!
+                    for (report in reports) {
+                        position = LatLng(report.lat, report.lng)
+
+                        mMap.addMarker(MarkerOptions().position(position).title(report.problem))
+                    }
+                }
+                else{
+                    Toast.makeText(this@Maps, "Response insuccessful", Toast.LENGTH_SHORT).show()
+                }
+
+            }
+
+            override fun onFailure(call: Call<List<Report>>, t: Throwable) {
+                Toast.makeText(this@Maps, "Erro -> onFailure!", Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 
     /**
@@ -39,9 +69,15 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
 
+/*
         // Add a marker in Sydney and move the camera
+
         val sydney = LatLng(-34.0, 151.0)
         mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+*/
+
+
+
     }
 }
