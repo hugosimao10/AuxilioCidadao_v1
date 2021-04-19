@@ -26,6 +26,8 @@
     <string name="erroOnFailure">Erro ao receber resposta do servidor!</string>
     <string name="logout">Sair</string>
     <string name="addReport">Adicionar reporte</string>
+    <string name="LoginOK">Login bem sucedido!</string>
+    <string name="LoginFalhado">Os dados inseridos não são válidos!</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 

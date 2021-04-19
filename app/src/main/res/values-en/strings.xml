@@ -26,4 +26,6 @@
     <string name="erroOnFailure">Error recieving response from server!</string>
     <string name="logout">Logout</string>
     <string name="addReport">Add report</string>
+    <string name="LoginOK">Successfully logged in!</string>
+    <string name="LoginFalhado">Inserted data is not valid!</string>
 </resources>
