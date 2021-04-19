@@ -11,9 +11,8 @@ interface EndPoints {
     @GET("api/reports/{id}")
     fun getReportById(@Path("id") id: Int): Call<Report>
 
-    @GET("api/users")
-    fun getUsers(): Call<List<User>>
+    @FormUrlEncoded
+    @POST("api/users/login")
+    fun getUsers(@Field("username") first: String?, @Field("password")second: String?): Call<OutputPost>
 
-    @GET("api/users/{id}")
-    fun getUsersById(@Path("id") id: Int): Call<User>
 }

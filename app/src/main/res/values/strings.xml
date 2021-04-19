@@ -28,6 +28,9 @@
     <string name="addReport">Adicionar reporte</string>
     <string name="LoginOK">Login bem sucedido!</string>
     <string name="LoginFalhado">Os dados inseridos não são válidos!</string>
+    <string name="guarda_login" translatable="false">file1</string>
+    <string name="id1" translatable="false">0</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
 

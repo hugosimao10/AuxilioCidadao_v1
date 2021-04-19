@@ -3,14 +3,16 @@ package ipvc.estg.auxiliocidadao
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
+import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import ipvc.estg.auxiliocidadao.api.EndPoints
+import ipvc.estg.auxiliocidadao.api.OutputPost
 import ipvc.estg.auxiliocidadao.api.Report
 import ipvc.estg.auxiliocidadao.api.ServiceBuilder
 import kotlinx.android.synthetic.main.activity_add_notas_pessoais.*
@@ -32,13 +34,19 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
+
+
+
+        // COORDENADAS DE VIANA PARA USAR COMO CENTRAL NA CAMERA
+
+        val viana = LatLng(41.6946, -8.83016)
+
         // BOTAO DE ADICIONAR REPORT
 
         fab_addReport.setOnClickListener { _ ->
             val intent = Intent(this, AddReport::class.java)
             startActivity(intent)
         }
-
 
         //  CONECTAR AO WEBHOST E BUSCAR TODOS OS REPORTES EFETUADOS PARA ADICIONAR NO MAPA
 
@@ -50,11 +58,25 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
             override fun onResponse(call: Call<List<Report>>, response: Response<List<Report>>) {
                 if (response.isSuccessful) {
                     reports = response.body()!!
+
+                    // CAMERA INICIAL A APONTAR PARA VIANA E COM ZOOM ADEQUADO
+
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(viana))
+                    mMap.animateCamera( CameraUpdateFactory.zoomTo(9.0f));
+
                     for (report in reports) {
 
                         position = LatLng(report.lat, report.lng)
 
-                        mMap.addMarker(MarkerOptions().position(position).title(report.problem))
+                        if(report.users_id == R.string.id1) {
+
+                            mMap.addMarker(MarkerOptions().position(position).title(report.problem).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)))
+                       }
+                        else{
+                            mMap.addMarker(MarkerOptions().position(position).title(report.problem).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)))
+
+                        }
+
                     }
                 }
                 else{
