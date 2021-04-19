@@ -28,4 +28,5 @@
     <string name="addReport">Add report</string>
     <string name="LoginOK">Successfully logged in!</string>
     <string name="LoginFalhado">Inserted data is not valid!</string>
+    <string name="filtros">Filters</string>
 </resources>

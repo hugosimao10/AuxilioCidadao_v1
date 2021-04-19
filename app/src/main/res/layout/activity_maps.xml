@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout1"
@@ -8,17 +8,29 @@
     android:gravity="center|top"
     android:orientation="vertical">
 
+
     <Button
         android:id="@+id/butLogout"
         android:layout_width="wrap_content"
-        android:layout_gravity="right"
-        android:layout_height="41dp"
-        android:text="@string/logout"
-        android:layout_marginRight="10dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/padding1"
         android:backgroundTint="@color/buttonsBackground"
+        android:text="@string/logout"
         android:textColor="@color/white"
-        android:textStyle="bold"
-  />
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/butFiltros"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginRight="@dimen/padding1"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/padding1"
+        android:backgroundTint="@color/buttonsBackground"
+        android:text="@string/filtros"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/relativeLayout2"
@@ -29,7 +41,8 @@
             android:id="@+id/map"
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="0dp"
-            android:layout_height="690dp"
+            android:layout_height="680dp"
+            android:layout_marginTop="50dp"
             map:layout_constraintEnd_toEndOf="parent"
             map:layout_constraintHorizontal_bias="0.0"
             map:layout_constraintStart_toStartOf="parent"
@@ -41,11 +54,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="14dp"
+            android:layout_marginBottom="@dimen/padding1"
             android:layout_marginRight="@dimen/paddin2"
             android:backgroundTint="@color/buttonsBackground"
-            android:paddingBottom="@dimen/paddin2"
             android:src="@drawable/icon_add"
-            android:layout_marginBottom="@dimen/paddin2"
             android:tintMode="@color/white"
             map:layout_constraintBottom_toBottomOf="@+id/map"
             map:layout_constraintEnd_toEndOf="parent" />
@@ -53,7 +65,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</LinearLayout>
+</RelativeLayout>
 
 
 
