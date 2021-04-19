@@ -8,12 +8,13 @@ import android.widget.Toast
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import ipvc.estg.auxiliocidadao.api.EndPoints
 import ipvc.estg.auxiliocidadao.api.Report
 import ipvc.estg.auxiliocidadao.api.ServiceBuilder
+import kotlinx.android.synthetic.main.activity_add_notas_pessoais.*
+import kotlinx.android.synthetic.main.activity_maps.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -31,6 +32,16 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
+        // BOTAO DE ADICIONAR REPORT
+
+        fab_addReport.setOnClickListener { _ ->
+            val intent = Intent(this, AddReport::class.java)
+            startActivity(intent)
+        }
+
+
+        //  CONECTAR AO WEBHOST E BUSCAR TODOS OS REPORTES EFETUADOS PARA ADICIONAR NO MAPA
+
         val request = ServiceBuilder.buildService(EndPoints::class.java)
         val call = request.getReports()
         var position: LatLng
@@ -40,19 +51,20 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
                 if (response.isSuccessful) {
                     reports = response.body()!!
                     for (report in reports) {
+
                         position = LatLng(report.lat, report.lng)
 
                         mMap.addMarker(MarkerOptions().position(position).title(report.problem))
                     }
                 }
                 else{
-                    Toast.makeText(this@Maps, "Response insuccessful", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@Maps, R.string.erroInsucesso, Toast.LENGTH_SHORT).show()
                 }
 
             }
 
             override fun onFailure(call: Call<List<Report>>, t: Throwable) {
-                Toast.makeText(this@Maps, "Erro -> onFailure!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@Maps, R.string.erroOnFailure, Toast.LENGTH_SHORT).show()
             }
         })
     }

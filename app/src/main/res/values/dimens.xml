@@ -3,6 +3,8 @@
     <dimen name="text_margin">10dp</dimen>
     <dimen name="tam_titulo">20dp</dimen>
     <dimen name="padding1">15dp</dimen>
+    <dimen name="paddin2">20dp</dimen>
     <dimen name="tam_descricao">17dp</dimen>
     <dimen name="tam_titulos1">45dp</dimen>
+    <dimen name="margem_baixo">50dp</dimen>
 </resources>

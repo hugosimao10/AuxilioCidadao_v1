@@ -21,7 +21,12 @@
     <string name="hint_descricao">Descrição</string>
     <string name="tituloEmpty">O título não pode ficar em branco!</string>
     <string name="descricaoEmpty">A descrição não pode ficar em branco!</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps">Mapa</string>
+    <string name="erroInsucesso">Erro ao comunicar com o servidor!</string>
+    <string name="erroOnFailure">Erro ao receber resposta do servidor!</string>
+    <string name="logout">Sair</string>
+    <string name="addReport">Adicionar reporte</string>
+
     <!-- TODO: Remove or change this placeholder text -->
 
 
