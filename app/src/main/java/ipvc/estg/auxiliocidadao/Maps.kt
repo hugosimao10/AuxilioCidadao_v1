@@ -29,6 +29,7 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var mMap: GoogleMap
     private lateinit var reports: List<Report>
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_maps)
@@ -40,6 +41,11 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
         val sharedPref: SharedPreferences = getSharedPreferences(
                 getString(R.string.guarda_login), Context.MODE_PRIVATE
         )
+
+            val id = sharedPref.all[getString(R.string.id1)] as Int?
+
+
+
 
         val button: Button = findViewById(R.id.butLogout)
         button.setOnClickListener {
@@ -88,7 +94,7 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
 
                         position = LatLng(report.lat, report.lng)
 
-                        if(report.users_id == R.string.id1) {
+                        if(report.users_id == id) {
 
                             mMap.addMarker(MarkerOptions().position(position).title(report.problem).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)))
                        }
