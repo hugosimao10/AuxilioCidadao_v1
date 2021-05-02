@@ -37,6 +37,12 @@
     <string name="addFoto">Adicionar Foto</string>
     <string name="problemaTit">Problema a reportar</string>
     <string name="enviar">Enviar</string>
+    <string name="userVazio">O username está vazio!</string>
+    <string name="passVazia">A pass está vazia!</string>
+    <string name="filtro5km">5 Km</string>
+    <string name="filtro20km">20 Km</string>
+    <string name="obras">Obras</string>
+    <string name="acidentes">Acidentes</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

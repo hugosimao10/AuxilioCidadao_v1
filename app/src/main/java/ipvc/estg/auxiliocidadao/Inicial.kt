@@ -74,7 +74,16 @@ class Inicial : AppCompatActivity() {
                             startActivity(intent)
                             finish()
 
-                        } else {
+                        } else if(userInserido.isEmpty()){
+
+                            Toast.makeText(this@Inicial, R.string.userVazio, Toast.LENGTH_SHORT).show()
+
+                            }
+                        else if(passInserida.isEmpty()){
+
+                            Toast.makeText(this@Inicial, R.string.passVazia, Toast.LENGTH_SHORT).show()
+                        }
+                        else{
                             Toast.makeText(this@Inicial, R.string.LoginFalhado, Toast.LENGTH_SHORT).show()
                         }
 

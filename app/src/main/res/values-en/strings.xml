@@ -2,7 +2,7 @@
 <resources>
     <string name="action_settings">Settings</string>
     <string name="app_name">Citizen Assistance</string>
-    <string name="mensagem_ini">See and report situations in your city!</string>
+    <string name="mensagem_ini">Watch and report situations in your city!</string>
     <string name="msg_login_login">Login</string>
     <string name="msg_voltar">Return</string>
     <string name="frag_primeiro">Initial Fragment</string>
@@ -34,4 +34,10 @@
     <string name="addFoto">Add photo</string>
     <string name="problemaTit">Situation to report</string>
     <string name="enviar">Send</string>
+    <string name="userVazio">Username is empty!</string>
+    <string name="passVazia">Password is empty!</string>
+    <string name="filtro5km">5 Km</string>
+    <string name="filtro20km">20 Km</string>
+    <string name="obras">Construction</string>
+    <string name="acidentes">Accidents</string>
 </resources>
