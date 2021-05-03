@@ -30,7 +30,6 @@ class EditDeleteReport : AppCompatActivity() {
 
         fab_voltar3.setOnClickListener { _ ->
             val intent = Intent(this, Maps::class.java)
-
             startActivity(intent)
         }
 
@@ -72,9 +71,11 @@ class EditDeleteReport : AppCompatActivity() {
 
                             val butDelt = findViewById<Button>(R.id.buttonDelete)
                             val butEdt = findViewById<Button>(R.id.buttonEdit)
+                            val butEdtFoto = findViewById<Button>(R.id.buttoneditPhoto2)
 
                             butDelt.isVisible = false
                             butEdt.isVisible = false
+                            butEdtFoto.isVisible = false
 
                             val latView = findViewById<TextView>(R.id.textViewLatSub2)
                             latView.setText(c.lat.toString())
@@ -82,9 +83,7 @@ class EditDeleteReport : AppCompatActivity() {
                             lngView.setText(c.lng.toString())
                             val probSet = findViewById<EditText>(R.id.ediTextProblem2)
                             probSet.setText(c.problem.toString())
-
                         }
-
                     }
                 }
 
@@ -97,20 +96,73 @@ class EditDeleteReport : AppCompatActivity() {
                 }
             })
 
-
-
-
     }
 
     fun editReport(view: View) {
 
+        val intentProblem: Bundle? = intent.extras
+        idReportEdit = intentProblem?.getString(Maps.EXTRA_PROBLEMID)!!.toString()
+
+        val idParaEditar = idReportEdit.toInt()
+
+        val newProblem = ediTextProblem2.text.toString()
+
+        val request = ServiceBuilder.buildService(EndPoints::class.java)
+        val call = request.updateReport(idParaEditar, newProblem)
+
+        call.enqueue(object : Callback<Report> {
+            override fun onResponse(call: Call<Report>, response: Response<Report>) {
+
+                if (response.isSuccessful) {
+                    val toast = Toast.makeText(applicationContext, R.string.sucesso, Toast.LENGTH_SHORT)
+                    toast.show()
+                    val intent = Intent(this@EditDeleteReport, Maps::class.java)
+                    startActivity(intent)
+                }
+            }
+            override fun onFailure(call: Call<Report>, t: Throwable) {
+                val toast = Toast.makeText(applicationContext, R.string.sucesso, Toast.LENGTH_SHORT)
+                toast.show()
+            }
 
 
-
+        })
     }
     fun deleteReport(view: View) {
 
+        val intentProblem: Bundle? = intent.extras
+        idReportEdit = intentProblem?.getString(Maps.EXTRA_PROBLEMID)!!.toString()
 
+        val idParaEditar = idReportEdit.toInt()
+
+        val request = ServiceBuilder.buildService(EndPoints::class.java)
+        val call = request.deleteReport(idParaEditar)
+
+        call.enqueue(object : Callback<Report> {
+            override fun onResponse(call: Call<Report>, response: Response<Report>) {
+
+                if (response.isSuccessful) {
+
+                    val toast = Toast.makeText(applicationContext, R.string.sucesso, Toast.LENGTH_SHORT)
+                    toast.show()
+
+                    val intent = Intent(this@EditDeleteReport, Maps::class.java)
+                    startActivity(intent)
+
+                }
+
+            }
+
+            override fun onFailure(call: Call<Report>, t: Throwable) {
+                Toast.makeText(
+                        this@EditDeleteReport,
+                        R.string.erroOnFailure,
+                        Toast.LENGTH_SHORT
+                ).show()
+            }
+
+
+        })
 
 
     }

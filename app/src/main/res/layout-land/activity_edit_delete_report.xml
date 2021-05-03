@@ -37,13 +37,13 @@
         android:layout_marginRight="93dp"
         android:layout_marginBottom="8dp"
         android:src="@drawable/ic_baseline_photo_camera_24"
-        app:layout_constraintBottom_toTopOf="@+id/buttonAddPhoto2"
-        app:layout_constraintEnd_toStartOf="@+id/ediTextProblem"
+        app:layout_constraintBottom_toTopOf="@+id/buttoneditPhoto2"
+        app:layout_constraintEnd_toStartOf="@+id/ediTextProblem2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/buttonAddPhoto2"
+        android:id="@+id/buttoneditPhoto2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"

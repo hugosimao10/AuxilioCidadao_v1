@@ -13,8 +13,6 @@ interface EndPoints {
     @GET("api/reports/{id}")
     fun getReportById(@Path("id") id: Int): Call<Report>
 
-
-
     @FormUrlEncoded
     @POST("api/users/login")
     fun getUsers(@Field("username") first: String?, @Field("password")second: String?): Call<OutputPost>
@@ -25,6 +23,12 @@ interface EndPoints {
                   @Field("photo")fourth: String, @Field("date")fifth: String, @Field("users_id")sixth: Int): Call<Report>
 
 
+    @FormUrlEncoded
+    @POST("api/reports/update/{id}")
+    fun updateReport(@Path("id") id: Int, @Field("problem") problem: String?): Call<Report>
 
+
+    @POST("api/reports/delete/{id}")
+    fun deleteReport(@Path("id") id: Int): Call<Report>
 
 }

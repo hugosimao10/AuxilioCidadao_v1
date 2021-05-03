@@ -270,9 +270,10 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
 
                                 for (report in reports) {
                                     position = LatLng(report.lat, report.lng)
+                                    val b = report.id.toString()
 
                                     if (calculateDistance(lastLocation.latitude, lastLocation.longitude, report.lat, report.lng) < 5000) {
-                                        mMap.addMarker(MarkerOptions().position(position).title(report.problem + report.date).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)))
+                                        mMap.addMarker(MarkerOptions().position(position).title(b).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)))
                                     }
 
 
@@ -330,9 +331,10 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
 
                                 for (report in reports) {
                                     position = LatLng(report.lat, report.lng)
+                                    val b = report.id.toString()
 
                                     if (calculateDistance(lastLocation.latitude, lastLocation.longitude, report.lat, report.lng) < 20000) {
-                                        mMap.addMarker(MarkerOptions().position(position).title(report.problem + report.date).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)))
+                                        mMap.addMarker(MarkerOptions().position(position).title(b).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)))
                                     }
 
                                 }
@@ -390,9 +392,10 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
                                 for (report in reports) {
                                     position = LatLng(report.lat, report.lng)
                                     problema = report.problem
+                                    val b = report.id.toString()
 
                                     if(report.problem.contains("Obra") || report.problem.contains("obra")) {
-                                        mMap.addMarker(MarkerOptions().position(position).title(report.problem + report.date).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)))
+                                        mMap.addMarker(MarkerOptions().position(position).title(b).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)))
 
                                     }
                                 }
@@ -450,9 +453,10 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
                                 for (report in reports) {
                                     position = LatLng(report.lat, report.lng)
                                     problema = report.problem
+                                    val b = report.id.toString()
 
                                     if(report.problem.contains("Acidente") || report.problem.contains("acidente")) {
-                                        mMap.addMarker(MarkerOptions().position(position).title(report.problem + report.date).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)))
+                                        mMap.addMarker(MarkerOptions().position(position).title(b).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)))
 
                                     }
                                 }
