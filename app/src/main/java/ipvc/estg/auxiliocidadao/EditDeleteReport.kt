@@ -123,6 +123,8 @@ class EditDeleteReport : AppCompatActivity() {
             override fun onFailure(call: Call<Report>, t: Throwable) {
                 val toast = Toast.makeText(applicationContext, R.string.sucesso, Toast.LENGTH_SHORT)
                 toast.show()
+                val intent = Intent(this@EditDeleteReport, Maps::class.java)
+                startActivity(intent)
             }
 
 
