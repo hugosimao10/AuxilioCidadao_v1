@@ -43,6 +43,16 @@
     <string name="filtro20km">20 Km</string>
     <string name="obras">Obras</string>
     <string name="acidentes">Acidentes</string>
+    <string name="sucesso">Sucesso!</string>
+    <string name="lat">Lat</string>
+    <string name="lng">Lng</string>
+    <string name="coord">Coordenadas</string>
+    <string name="markerCLick">Não é possivel mostrar informação!</string>
+    <string name="Editar">Editar</string>
+    <string name="Apagar">Apagar</string>
+    <string name="visualizarReport">Detalhes do reporte</string>
+    <string name="Report">Situação</string>
+    <string name="editarFoto">Editar foto</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

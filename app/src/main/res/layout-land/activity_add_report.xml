@@ -8,6 +8,41 @@
     android:background="@color/white"
     tools:context=".AddReport">
 
+    <TextView
+        android:id="@+id/textViewLngSubs"
+        android:layout_width="148dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="32dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="@dimen/paddin2"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewPhoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLatSub" />
+
+    <TextView
+        android:id="@+id/textViewLatSub"
+        android:layout_width="149dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginBottom="5dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="@dimen/paddin2"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewLngSubs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_voltar2"
@@ -47,7 +82,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="167dp"
         android:layout_marginLeft="167dp"
-        android:layout_marginTop="51dp"
         android:layout_marginEnd="186dp"
         android:layout_marginRight="186dp"
         android:layout_marginBottom="11dp"
@@ -58,14 +92,14 @@
         app:layout_constraintBottom_toTopOf="@+id/ediTextProblem"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.213"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCoordinates" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/buttonSend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="248dp"
+        android:onClick="enviar"
         android:layout_marginLeft="248dp"
         android:backgroundTint="@color/buttonsBackground"
         android:text="@string/enviar"
@@ -93,21 +127,9 @@
         android:text="@string/addFoto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="escolheFoto"
         app:layout_constraintHorizontal_bias="0.761"
         app:layout_constraintStart_toEndOf="@+id/ediTextProblem" />
-
-    <EditText
-        android:id="@+id/editTextCoordinates"
-        android:layout_width="223dp"
-        android:layout_height="38dp"
-        android:layout_marginBottom="47dp"
-        android:enabled="false"
-        app:layout_constraintBottom_toTopOf="@+id/imageViewPhoto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
-        app:layout_constraintStart_toEndOf="@+id/textReporte"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/ediTextProblem"
@@ -122,6 +144,25 @@
         app:layout_constraintBottom_toTopOf="@+id/fab_voltar2"
         app:layout_constraintEnd_toStartOf="@+id/imageViewPhoto"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="220dp"
+        android:layout_marginRight="220dp"
+        android:layout_marginBottom="155dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/paddin2"
+        android:textStyle="bold"
+        android:text="@string/coord"
+        app:layout_constraintBottom_toTopOf="@+id/ediTextProblem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textReporte"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

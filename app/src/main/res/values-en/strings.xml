@@ -38,6 +38,16 @@
     <string name="passVazia">Password is empty!</string>
     <string name="filtro5km">5 Km</string>
     <string name="filtro20km">20 Km</string>
-    <string name="obras">Construction</string>
+    <string name="obras">Constructions</string>
     <string name="acidentes">Accidents</string>
+    <string name="sucesso">Success!</string>
+    <string name="lat">Lat</string>
+    <string name="lng">Lng</string>
+    <string name="coord">Coordinates</string>
+    <string name="markerCLick">Info is not available!</string>
+    <string name="Editar">Edit</string>
+    <string name="Apagar">Delete</string>
+    <string name="visualizarReport">Report details</string>
+    <string name="Report">Report</string>
+    <string name="editarFoto">Edit photo</string>
 </resources>

@@ -37,6 +37,7 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var locationCallback: LocationCallback
     private lateinit var locationRequest: LocationRequest
     private var results = FloatArray(1)
+    var idPassa = 0;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -107,18 +108,20 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
                 if (response.isSuccessful) {
                     reports = response.body()!!
 
+                    val viana = LatLng(41.6946, -8.83016)
 
+                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(viana, 8.0f))
                     for (report in reports) {
 
-
                         position = LatLng(report.lat, report.lng)
+                        val b = report.id.toString()
 
                         if(report.users_id == id) {
 
-                            mMap.addMarker(MarkerOptions().position(position).title(report.problem).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)))
+                            mMap.addMarker(MarkerOptions().position(position).title(b).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)))
                        }
                         else{
-                            mMap.addMarker(MarkerOptions().position(position).title(report.problem).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)))
+                            mMap.addMarker(MarkerOptions().position(position).title(b).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)))
 
                         }
 
@@ -137,7 +140,7 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
     }
 
 
-
+    // UPDATES DA LOCALIZACAO
     private fun startLocationUpdates() {
 
         if(ActivityCompat.checkSelfPermission(this,
@@ -153,7 +156,7 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
 
     }
 
-
+    // CRIA PEDIDO DE LOCALIZACAO
     private fun createLocationRequest() {
             locationRequest = LocationRequest()
             locationRequest.interval = 10000
@@ -172,26 +175,26 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
     }
 
     /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
+     * ON MAP READY
      */
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
 
-/*
-        // Add a marker in Sydney and move the camera
-
-        val sydney = LatLng(-34.0, 151.0)
-        mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
-*/
-
         setUpMap()
+
+        mMap.setOnMarkerClickListener { marker ->
+            if (marker.isInfoWindowShown) {
+                Toast.makeText(this@Maps, R.string.markerCLick, Toast.LENGTH_LONG).show()
+            } else {
+
+                val intent = Intent(this, EditDeleteReport::class.java)
+                intent.putExtra(EXTRA_PROBLEMID, marker.title)
+                startActivity(intent)
+
+
+            }
+            true
+        }
 
     }
 
@@ -229,8 +232,6 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
     }
 
     fun filtro5km(view: View) {
-
-        Toast.makeText(applicationContext, R.string.filtro5km, Toast.LENGTH_SHORT).show()
 
         if (ActivityCompat.checkSelfPermission(this,
                         android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -271,7 +272,7 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
                                     position = LatLng(report.lat, report.lng)
 
                                     if (calculateDistance(lastLocation.latitude, lastLocation.longitude, report.lat, report.lng) < 5000) {
-                                        mMap.addMarker(MarkerOptions().position(position).title(report.problem).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)))
+                                        mMap.addMarker(MarkerOptions().position(position).title(report.problem + report.date).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)))
                                     }
 
 
@@ -291,8 +292,6 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
 
 
     fun filtro20km(view: View) {
-
-        Toast.makeText(applicationContext, R.string.filtro20km, Toast.LENGTH_SHORT).show()
 
         if (ActivityCompat.checkSelfPermission(this,
                         android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -333,7 +332,7 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
                                     position = LatLng(report.lat, report.lng)
 
                                     if (calculateDistance(lastLocation.latitude, lastLocation.longitude, report.lat, report.lng) < 20000) {
-                                        mMap.addMarker(MarkerOptions().position(position).title(report.problem).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)))
+                                        mMap.addMarker(MarkerOptions().position(position).title(report.problem + report.date).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)))
                                     }
 
                                 }
@@ -351,8 +350,6 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
     }
 
     fun filtroObras(view: View) {
-
-        Toast.makeText(applicationContext, R.string.obras, Toast.LENGTH_SHORT).show()
 
         if (ActivityCompat.checkSelfPermission(this,
                         android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -395,7 +392,7 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
                                     problema = report.problem
 
                                     if(report.problem.contains("Obra") || report.problem.contains("obra")) {
-                                        mMap.addMarker(MarkerOptions().position(position).title(report.problem).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)))
+                                        mMap.addMarker(MarkerOptions().position(position).title(report.problem + report.date).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)))
 
                                     }
                                 }
@@ -413,8 +410,6 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
 
     }
     fun filtroAcidentes(view: View) {
-
-        Toast.makeText(applicationContext, R.string.acidentes, Toast.LENGTH_SHORT).show()
 
         if (ActivityCompat.checkSelfPermission(this,
                         android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -457,7 +452,7 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
                                     problema = report.problem
 
                                     if(report.problem.contains("Acidente") || report.problem.contains("acidente")) {
-                                        mMap.addMarker(MarkerOptions().position(position).title(report.problem).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)))
+                                        mMap.addMarker(MarkerOptions().position(position).title(report.problem + report.date).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)))
 
                                     }
                                 }
@@ -473,6 +468,11 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
             }
         }
 
+
+    }
+
+    companion object {
+        const val EXTRA_PROBLEMID = "valor"
 
     }
 
