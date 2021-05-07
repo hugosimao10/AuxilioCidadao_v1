@@ -41,9 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:textColor="@color/black"
-        android:inputType="text|textMultiLine|textCapSentences"
-        android:maxLines="2"
-        android:maxLength="45"
+        android:inputType="textMultiLine"
         android:layout_centerHorizontal="true"
         android:hint="@string/hint_descricao" />
 

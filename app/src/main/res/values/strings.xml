@@ -28,6 +28,32 @@
     <string name="addReport">Adicionar reporte</string>
     <string name="LoginOK">Login bem sucedido!</string>
     <string name="LoginFalhado">Os dados inseridos não são válidos!</string>
+    <string name="guarda_login" translatable="false">file1</string>
+    <string name="id1" translatable="false">0</string>
+    <string name="lastId" translatable="false">1</string>
+    <string name="filtros">Filtros</string>
+    <string name="Latlong">Coordenadas</string>
+    <string name="insereProblema">Insira aqui a situação a reportar</string>
+    <string name="addFoto">Adicionar Foto</string>
+    <string name="problemaTit">Problema a reportar</string>
+    <string name="enviar">Enviar</string>
+    <string name="userVazio">O username está vazio!</string>
+    <string name="passVazia">A pass está vazia!</string>
+    <string name="filtro5km">5 Km</string>
+    <string name="filtro20km">20 Km</string>
+    <string name="obras">Obras</string>
+    <string name="acidentes">Acidentes</string>
+    <string name="sucesso">Sucesso!</string>
+    <string name="lat">Lat</string>
+    <string name="lng">Lng</string>
+    <string name="coord">Coordenadas</string>
+    <string name="markerCLick">Não é possivel mostrar informação!</string>
+    <string name="Editar">Editar</string>
+    <string name="Apagar">Apagar</string>
+    <string name="visualizarReport">Detalhes do reporte</string>
+    <string name="Report">Situação</string>
+    <string name="editarFoto">Editar foto</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
 

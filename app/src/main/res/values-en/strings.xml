@@ -2,7 +2,7 @@
 <resources>
     <string name="action_settings">Settings</string>
     <string name="app_name">Citizen Assistance</string>
-    <string name="mensagem_ini">See and report situations in your city!</string>
+    <string name="mensagem_ini">Watch and report situations in your city!</string>
     <string name="msg_login_login">Login</string>
     <string name="msg_voltar">Return</string>
     <string name="frag_primeiro">Initial Fragment</string>
@@ -28,4 +28,26 @@
     <string name="addReport">Add report</string>
     <string name="LoginOK">Successfully logged in!</string>
     <string name="LoginFalhado">Inserted data is not valid!</string>
+    <string name="filtros">Filters</string>
+    <string name="Latlong">Coordinates</string>
+    <string name="insereProblema">Insert here the situation you wish to report</string>
+    <string name="addFoto">Add photo</string>
+    <string name="problemaTit">Situation to report</string>
+    <string name="enviar">Send</string>
+    <string name="userVazio">Username is empty!</string>
+    <string name="passVazia">Password is empty!</string>
+    <string name="filtro5km">5 Km</string>
+    <string name="filtro20km">20 Km</string>
+    <string name="obras">Constructions</string>
+    <string name="acidentes">Accidents</string>
+    <string name="sucesso">Success!</string>
+    <string name="lat">Lat</string>
+    <string name="lng">Lng</string>
+    <string name="coord">Coordinates</string>
+    <string name="markerCLick">Info is not available!</string>
+    <string name="Editar">Edit</string>
+    <string name="Apagar">Delete</string>
+    <string name="visualizarReport">Report details</string>
+    <string name="Report">Report</string>
+    <string name="editarFoto">Edit photo</string>
 </resources>

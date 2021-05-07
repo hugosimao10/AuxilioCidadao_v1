@@ -86,4 +86,10 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     androidTestImplementation "androidx.test.ext:junit:$rootProject.androidxJunitVersion"
+
+    // Location
+
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+
+
 }
